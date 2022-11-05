@@ -18,15 +18,3 @@ export default function Alert() {
   ));
   return <div>{divColor}</div>;
 }
-/*export default function Alert() {
-  const notice = color.map((color) => (
-    <div className={color.id}>
-      <alert>This is a {color.text} alert—check it out!</alert>
-    </div>
-  ));
-  return <alert>{notice}</alert>;
-}*/
-
-/*<div className = "item1">
-    <alert>This is a primary alert—check it out!</alert>
-</div> */
