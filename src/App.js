@@ -1,6 +1,6 @@
 import "./App.css";
 
-const color = [
+const colors = [
   { text: "primary", id: 1 },
   { text: "secondary", id: 2 },
   { text: "success", id: 3 },
@@ -10,11 +10,18 @@ const color = [
   { text: "light", id: 7 },
   { text: "dark", id: 8 },
 ];
-export default function Alert() {
-  const divColor = color.map((color) => (
-    <div className={color.text}>
-      <p>This is a {color.text} alert—check it out!</p>
+
+function Alert({ color }) {
+  return (
+    <div className={"alert " + color}>
+      <p>This is a {color} alert—check it out!</p>
     </div>
+  );
+}
+
+export default function Alerts() {
+  const alertsList = colors.map((arrayElement) => (
+    <Alert color={arrayElement.text}></Alert>
   ));
-  return <div>{divColor}</div>;
+  return <div>{alertsList}</div>;
 }
